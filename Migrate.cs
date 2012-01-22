@@ -17,7 +17,7 @@ public class Vertex3D {
   public int x, y, z;
 
   // make a 3D vertex with the given coordinates
-  public Vertex3D( int vx = 0, int vy = 0, int vz = 0 ) {
+  public Vertex3D( int vx, int vy, int vz ) {
     x = vx;
     y = vy;
     z = vz;
@@ -31,7 +31,7 @@ public class Vector2D {
   public double x, y;
 
   // Make a 2D point/vector with the given coordinates.
-  public Vector2D( double vx = 0, double vy = 0 ) {
+  public Vector2D( double vx, double vy ) {
     x = vx;
     y = vy;
   }
@@ -158,10 +158,10 @@ public class Migrate {
   // Simple representation for a pusher.
   class Pusher {
     // Position of the pusher.
-    public Vector2D pos = new Vector2D();
+    public Vector2D pos = new Vector2D(0,0);
     
     // Pusher velocity
-    public Vector2D vel = new Vector2D();
+    public Vector2D vel = new Vector2D(0,0);
     
     // True if this pusher has a job.
     public bool busy;
@@ -181,10 +181,10 @@ public class Migrate {
   // Simple representation for a marker.
   class Marker {
     // Position of the marker.
-    public Vector2D pos = new Vector2D();
+    public Vector2D pos = new Vector2D(0,0);
 
     // Marker velocity
-    public Vector2D vel = new Vector2D();
+    public Vector2D vel = new Vector2D(0,0);
 
     // Marker color
     public int color;
